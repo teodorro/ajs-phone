@@ -1,7 +1,7 @@
-export default function sum(items) {
-  let result = 0;
-  for (const item of items) {
-    result += item;
+export default function convert(phone) {
+  let res = phone.replace(/[ )(-]/g, '');
+  if (res.match(/^8[0-9]+/)) {
+    res = res.replace(/8/, '+7');
   }
-  return result;
+  return res;
 }
